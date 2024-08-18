@@ -1,0 +1,201 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+  body{
+      font-size:14px;
+      background:#f2f2f2;
+
+  }
+  .container{
+      background:white;
+      width: 500px;
+      padding:25px;
+      margin:50px auto 0;
+     border-top: 5px solid blue;
+     box-shadow: 0 0 7px 5px rgba(0,0,0,0.5);
+  }
+
+  .container h2{
+      font-size:24px;
+      line-height: 24px;
+      padding: 30px;
+      text-align:center;
+  }
+
+  .input_name{
+      width:90%;
+      position:relative;
+      margin:20px auto;
+  }
+
+  .lock{
+      padding:8px 11px;
+      position:absolute;
+  }
+  .name{
+      width: 45%;
+      padding:8px 0 8px 40px;
+  }
+  .input_name span {
+  margin-left: 35px
+  }
+
+  .text-name{
+      width:100%;
+      padding:8px 0 8px 40px;
+  }
+  .input_name i{
+      position:absolute;
+      font-size: 18px;
+      color: blue;
+      border-right:1px solid #cccccc;
+  }
+  .email{
+      padding:8px;
+  }
+  .text-name, .name{
+      border: 1px solid #cccccc
+      outline:none;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      transition: all 0.30s ease-in-out;
+  }
+  .text-name:hover, .name:hover{
+      background-color:#fafafa;
+
+  }
+  .text-name:focus, .name:focus{
+      border: 1px solid blue;
+  }
+  .radio-button{
+      margin-right:4px;
+  }
+  .country{
+      display:inline-block;
+      width:100%;
+      height:35px;
+      padding: 0px 0px 15px
+      width:100%;
+      padding:8px 0 8px 40px;
+      cursor:pointer;
+      border:1px solid #cccccc;
+      border-radius:0;
+      background:white;
+      appearance:none;
+
+  }
+  .country::ms-expand{
+      display:none;
+  }
+  .country:hover, .country:focus{
+      color:blue;
+      background:#fafafa
+      border-color:blue;
+  }
+
+  .arrow{
+      position:absolute;
+      top:calc(50% - 4px);
+      right:15px;
+      width:0;
+      height: 0;
+      pointer-events:none;
+      border-width:8px 5px 0 5px;
+      border-style:solid;
+      border-color:#7b7b7b transparent transparent transparent;
+  }
+
+  .country:hover + .arrow, .country:focus +arrow{
+      border-top-color:blue;
+  }
+  .check{
+      margin-right:15px;
+      position:relative;
+  }
+  .check::before{
+      content:"";
+      dispaly:inline-block;
+      width:8px;
+      height:8px;
+      margin-right:8px;
+      vertical-aligh:-2px;
+      border: 2px solid #cccccc
+      padding:2.5px;
+      background-color:transparent;
+      background-clip:content-box;
+      transition: all 0.2s ease;
+  }
+
+  .check::after{
+      border-right:2px solid black;
+      border-top:2px solid black;
+      content="";
+      height:20px;
+      left:2px;
+      position:absolute;
+      top:7px;
+      transform:scaleX(-1.0) rotte(135 deg);
+      transform-origin:left top;
+      width:7px;
+      display:none;
+  }
+
+  /*
+   .check-button{
+      border:0;
+      clip:rect(0 0 0 0);
+      height:1px;
+      margin:1px;
+   } */
+  .check-button:hover + .check::before{
+      border-color:#000;
+  }
+
+
+  .button{
+      background-color:blue;
+      color: white;
+      height:35px;
+      line-height:35px;
+      width:100%;
+      border:none;
+      outline:none;
+      font-size:18px;
+      cursor:pointer;
+      margin-bottom:10px;
+  }
+  .button:hover{
+      background:green;
+  }
+
+  .error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+  }
+
+  @media (max-width:480px)
+  {
+      .container{
+          width:100%;
+
+      }
+      .input-name{
+        margin-bottom:-10px;
+        display:block;
+      }
+      .name{
+          width:100%;
+          padding:8px 0 8px 40px;
+          margin-bottom:10px
+          display:block;
+      }
+
+
+  }
